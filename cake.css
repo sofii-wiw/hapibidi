@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SN Pro', sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+html, body{
+    background-image: url("https://i.pinimg.com/1200x/40/34/4f/40344f8e660da7437de17e71d012e7f3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+#cake{
+    position: relative;
+    width: 80%;
+    max-width: 400px; 
+    margin-top: 50rem;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.cake{
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 5px rgba(255, 161, 200, 0.712));
+}
+
+.candle{
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8%;
+    height: auto;
+    filter: saturate(1.9) brightness(1);
+    transform-origin: bottom center;
+    animation: candle 4s infinite ease-in-out;
+}
+
+@keyframes candle {
+    0%   { transform: translateX(-50%) rotate(0deg); }
+    25%  { transform: translateX(-50%) rotate(1deg); }
+    50%  { transform: translateX(-50%) rotate(-1deg); }
+    75%  { transform: translateX(-50%) rotate(1deg); }
+    100% { transform: translateX(-50%) rotate(0deg); }
+}
+
+button{
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #ff72b8;
+    color: rgb(255, 210, 231);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #ff4c9e;
+}
+
+#confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh; 
+  background-image: url("https://cdn.pixabay.com/animation/2024/05/02/07/43/07-43-00-535_512.gif");
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: hue-rotate(700deg) saturate(30%) brightness(1.9) blur(0.5px) contrast(1);
+  opacity: .8;
+  pointer-events: none; 
+  z-index: 0; 
+  animation: 4s infinite ease-in-out;
+  display: none;
+}
+
+#confetti-container.active {
+    display: block;
+    animation: 4s infinite ease-in-out;
+}
+
+
